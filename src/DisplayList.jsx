@@ -1,8 +1,11 @@
-function DisplayList () {
+function DisplayList ({list}) {
     return (
-    <header>
-    <h1>Display List!!!</h1>
-    </header>
+    <section className="display-list">
+        <ul>{list.map((task) => {
+            return <li key={task.name}>{task.name}</li>
+        })}</ul>
+    </section>
+
     )
 }
 

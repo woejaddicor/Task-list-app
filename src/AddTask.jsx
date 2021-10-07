@@ -14,7 +14,7 @@ function AddTask ({setList}) {
     return (
     <section className="add-task">
         <form onSubmit={handleSubmit}>
-            <label htmlFor="list-addition">Add to the list</label>
+            <label htmlFor="list-addition">Add to the list: </label>
             <input type="text" required value={newTask} onChange={(e) => {
                 setNewTask(e.target.value)
             }} id="list-addition"/>

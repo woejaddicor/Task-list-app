@@ -13,14 +13,14 @@ function DisplayList ({list}) {
             {list.map((task) => {
                 if (task.completed) {
                     return(<tr key={task.name}><td>{task.name}</td>
-                        <td>✅</td>
-                        <td><button type="button">Undo</button></td>
+                        <td className="complete">✅</td>
+                        <td className="col3"><button class="mark" type="button">Undo</button></td>
                       </tr> 
                     )
                 } else {
                     return (<tr key={task.name}><td>{task.name}</td>
-                        <td>❌</td>
-                        <td><button type="button">Complete</button></td>
+                        <td className="complete">❌</td>
+                        <td className="col3"><button class="mark" type="button">Complete</button></td>
                       </tr>  )
                 }
             })}

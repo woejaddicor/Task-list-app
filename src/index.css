@@ -1,13 +1,75 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: gold;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 5px solid black;
+}
+
+.add-task form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-task {
+  border-bottom: 5px solid black;
+  padding-bottom: 35px;
+}
+
+.add-task button {
+  background-color: pink;
+  margin-left: 5px;
+  height: 2rem;
+  border-radius: 8px;
+}
+
+.add-task input {
+  height: 2rem;
+  border-radius: 8px;
+  width: 50%;
+}
+
+.display-list {
+  display: flex;
+  justify-content: center;
+}
+
+.task-table {
+  border: 2px solid black;
+  background-color: gray;
+}
+
+.complete {
+  text-align: center;
+}
+
+.task-table td {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.col3 {
+  text-align: center;
+}
+
+.mark {
+  width: 80px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

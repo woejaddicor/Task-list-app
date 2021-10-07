@@ -6,6 +6,7 @@ function DisplayList ({list}) {
             <tr>
                 <th>Task</th>
                 <th>Completed</th>
+                <th>Mark Complete</th>
             </tr>
             </thead>
             <tbody>
@@ -13,19 +14,18 @@ function DisplayList ({list}) {
                 if (task.completed) {
                     return(<tr key={task.name}><td>{task.name}</td>
                         <td>✅</td>
+                        <td><button type="button">Undo</button></td>
                       </tr> 
                     )
                 } else {
                     return (<tr key={task.name}><td>{task.name}</td>
                         <td>❌</td>
+                        <td><button type="button">Complete</button></td>
                       </tr>  )
                 }
             })}
             </tbody>
         </table>
-        {/* <ul>{list.map((task) => {
-            return <li key={task.name}>{task.name}</li>
-        })}</ul> */}
     </section>
 
     )

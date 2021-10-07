@@ -1,8 +1,12 @@
 function AddTask () {
     return (
-    <header>
-    <h1>Add Task!!!</h1>
-    </header>
+    <section className="add-task">
+        <form>
+            <label for="list-addition">Add to the list</label>
+            <input type="text" id="list-addition"/>
+            <button>Submit Task</button>
+        </form>
+    </section>
     )
 }
 

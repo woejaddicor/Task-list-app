@@ -1,18 +1,33 @@
 function DisplayList ({list, setList}) {
     function changeCompletion (e, taskName) {
         e.preventDefault()
-        
+    
         setList((currList) => {
-            const newList = [...list]
+            const copyList = [...list]
             const tasktoUpdate = taskName
-            const updatedList = newList.map((item) => {
+            const updatedList = copyList.map((item) => {
                 if (item.name === tasktoUpdate) {
-                    return {name: item.name, completed: !item.completed}
+                    const newItem = {...item}
+                    return {name: newItem.name, completed: !newItem.completed}
                 } else {
-                    return {name: item.name, completed: item.completed}
+                    const newItem = {...item}
+                    return {name: newItem.name, completed: newItem.completed}
                 }
             })
             return updatedList
+        })
+    }
+
+    function deleteTask (e, taskName) {
+        e.preventDefault()
+
+        setList((currList) => {
+            const tasktoUpdate = taskName
+            const copyList = [...list]
+            const filteredList = copyList.filter((item) => {
+               return item.name !== tasktoUpdate
+            })
+            return filteredList
         })
     }
 
@@ -24,6 +39,7 @@ function DisplayList ({list, setList}) {
                 <th>Task</th>
                 <th>Completed</th>
                 <th>Mark Complete</th>
+                <th>Delete Task</th>
             </tr>
             </thead>
             <tbody>
@@ -34,6 +50,9 @@ function DisplayList ({list, setList}) {
                         <td className="col3"><button onClick={
                             e => {changeCompletion(e, task.name)}
                         } className="mark" type="button">Undo</button></td>
+                        <td className="col4"><button onClick={
+                            e => {deleteTask(e, task.name)}
+                        } >Delete</button></td>
                       </tr> 
                     )
                 } else {
@@ -42,6 +61,10 @@ function DisplayList ({list, setList}) {
                         <td className="col3"><button onClick={
                             e => {changeCompletion(e, task.name)}
                         } className="mark" type="button">Complete</button></td>
+                        <td className="col4"><button onClick={
+                            e => {deleteTask(e, task.name)}
+                        }>Delete</button></td>
+
                       </tr>  )
                 }
             })}

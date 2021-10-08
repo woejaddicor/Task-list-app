@@ -14,9 +14,11 @@ function App() {
    <div className="app"> 
    <Header />,
    <AddTask setList={setList}/>,
-   <DisplayList list={list}/>
+   <DisplayList list={list} setList={setList}/>
    </div>
   );
 }
 
 export default App;
+
+

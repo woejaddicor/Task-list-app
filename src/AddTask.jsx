@@ -18,7 +18,7 @@ function AddTask ({setList}) {
             <input type="text" required value={newTask} onChange={(e) => {
                 setNewTask(e.target.value)
             }} id="list-addition"/>
-            <button>Submit Task</button>
+            <button className="button_slide slide_right">Submit Task</button>
         </form>
     </section>
     )

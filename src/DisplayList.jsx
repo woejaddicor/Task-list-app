@@ -4,9 +4,9 @@ function DisplayList ({list, setList}) {
     
         setList((currList) => {
             const copyList = [...list]
-            const tasktoUpdate = taskName
+            const taskToUpdate = taskName
             const updatedList = copyList.map((item) => {
-                if (item.name === tasktoUpdate) {
+                if (item.name === taskToUpdate) {
                     const newItem = {...item}
                     return {name: newItem.name, completed: !newItem.completed}
                 } else {
@@ -22,10 +22,10 @@ function DisplayList ({list, setList}) {
         e.preventDefault()
 
         setList((currList) => {
-            const tasktoUpdate = taskName
+            const taskToUpdate = taskName
             const copyList = [...list]
             const filteredList = copyList.filter((item) => {
-               return item.name !== tasktoUpdate
+               return item.name !== taskToUpdate
             })
             return filteredList
         })
@@ -41,7 +41,7 @@ function DisplayList ({list, setList}) {
         <table className="task-table">
             <thead>
             <tr>
-                <th>Task</th>
+                <th className="col1">Task</th>
                 <th>Completed</th>
                 <th>Mark Complete</th>
                 <th>Delete Task</th>

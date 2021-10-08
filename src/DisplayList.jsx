@@ -31,6 +31,11 @@ function DisplayList ({list, setList}) {
         })
     }
 
+    if (list.length === 0) {
+        return <section className="noList">
+            <p>Please add some tasks</p>
+        </section>
+    } else {
     return (
     <section className="display-list">
         <table className="task-table">
@@ -74,5 +79,5 @@ function DisplayList ({list, setList}) {
 
     )
 }
-
+}
 export default DisplayList;
